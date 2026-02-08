@@ -13,6 +13,6 @@ Thumbs.db
 .env.*
 *.local
 
-# Documentations
+# Long-form docs (keep README.md and per-service READMEs versioned)
 docs/
 *.md
