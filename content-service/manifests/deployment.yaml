@@ -19,7 +19,7 @@ spec:
         - name: ghcr-pull-secret
       containers:
         - name: content-service
-          image: ghcr.io/capemedia-crm/content-service:dev
+          image: ghcr.io/thaka-creations/content-service:sha-b2f3114
           imagePullPolicy: Always
           ports:
             - name: http
