@@ -1,0 +1,23 @@
+# Reusable CI workflow – called by app repos
+# Add steps as needed: run tests, trigger deploy, notify, etc.
+name: CI
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: false
+        type: string
+        default: "dev"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI (devops)
+        run: |
+          echo "Environment: ${{ inputs.environment }}"
+          echo "Caller repo: ${{ github.repository }}"
+          echo "Ref: ${{ github.ref }}"
+          # Add your steps: e.g. run tests, trigger Fleet sync, Rancher redeploy, etc.

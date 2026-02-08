@@ -12,3 +12,7 @@ Thumbs.db
 .env
 .env.*
 *.local
+
+# Documentations
+docs/
+*.md
