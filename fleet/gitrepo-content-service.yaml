@@ -1,0 +1,13 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: content-service
+  namespace: fleet-default
+spec:
+  repo: https://github.com/capemedia-crm/content-service
+  branch: main
+  paths:
+    - content-service
+  targets:
+    - clusterName: prod
+  clientSecretName: devops-git-credentials
